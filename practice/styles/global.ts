@@ -7,7 +7,7 @@ export default StyleSheet.create({
 		paddingHorizontal: 20
 	},
 	formContainer: {
-		backgroundColor: 'white',
+		backgroundColor: 'black',
 		padding: 20,
 		borderRadius: 10,
 		shadowColor: '#000',
