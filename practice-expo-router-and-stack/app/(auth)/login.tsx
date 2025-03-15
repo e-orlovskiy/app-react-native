@@ -1,3 +1,4 @@
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import { Link, router } from 'expo-router'
 import { useAtom } from 'jotai'
 import { Button, Text, View } from 'react-native'
@@ -6,9 +7,14 @@ import { isAuthenticatedAtom } from '../state/auth'
 export default function Login() {
 	const [, setIsAuthenticated] = useAtom(isAuthenticatedAtom)
 
-	const handleLogin = () => {
-		setIsAuthenticated(true)
-		router.replace('/(app)')
+	const handleLogin = async () => {
+		try {
+			await AsyncStorage.setItem('isAuthenticatedStatus', 'true')
+			setIsAuthenticated(true)
+			router.replace('/(app)')
+		} catch (err) {
+			console.error('Возникла ошибка при авторизации')
+		}
 	}
 
 	return (
