@@ -8,7 +8,7 @@ export default function Register() {
 
 	const handleRegister = () => {
 		setIsAuthenticated(true)
-		router.replace('/(app)')
+		router.replace('/(app)/index')
 	}
 
 	return (

@@ -6,7 +6,11 @@ export default function RootLayout() {
 	const [isAuthenticated] = useAtom(isAuthenticatedAtom)
 
 	return (
-		<Stack>
+		<Stack
+			screenOptions={{
+				headerShown: false
+			}}
+		>
 			{!isAuthenticated ? (
 				<Stack.Screen
 					name='(auth)'
