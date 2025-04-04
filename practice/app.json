@@ -1,7 +1,7 @@
 {
 	"expo": {
 		"name": "my project for practice",
-		"slug": "practice project",
+		"slug": "practice-project",
 		"description": "тренировочное приложение",
 		"version": "1.0.0",
 		"platforms": ["ios", "android"],
